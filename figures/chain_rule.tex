@@ -1,0 +1,64 @@
+\documentclass[11pt]{standalone}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[margin=1in,vmargin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{floatrow}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+
+\begin{document}
+\newcommand\xbase{-3.95}%
+\newcommand\ybase{0.7}%
+\newcommand\hibox{1.2}%
+\newcommand\wibox{0.88}%
+\newcommand\tbdis{3.34}%
+\newcommand\bbdis{3.34}%
+\newcommand\ybshift{-1.3}%
+\newcommand\xbshift{-0.45}%
+\newcommand\xobshift{1.35}%
+\newcommand\xotshift{1.85}%
+\begin{tikzpicture}[baseline=(current bounding box.center),thick,scale=0.8, every node/.style={scale=0.8}]
+  \node (A) at (0,1.3) {
+    \LARGE{$
+      \frac{\partial z^{4}}{\partial w_{1}} =  
+      \frac{\partial z^{4}}{\partial z_{2}^{3}}\; \frac{\partial z_{2}^{3}}{\partial z_{3}^{2}}\;\frac{\partial z_{3}^{2}}{\partial w_{1}} 
+      + \frac{\partial z^{4}}{\partial z_{2}^{3}}\; \frac{\partial z_{2}^{3}}{\partial z_{2}^{2}}\;\frac{\partial z_{2}^{2}}{\partial w_{1}} 
+      + \frac{\partial z^{4}}{\partial z_{2}^{3}}\; \frac{\partial z_{2}^{3}}{\partial z_{1}^{2}}\;\frac{\partial z_{1}^{2}}{\partial w_{1}}
+      $}
+  };
+
+  \node (B) at (0,0) {
+    \LARGE{$
+      +\; \frac{\partial z^{4}}{\partial z_{1}^{3}} \;\frac{\partial z_{1}^{3}}{\partial z_{3}^{2}}\;\frac{\partial z_{3}^{2}}{\partial w_{1}} 
+      + \frac{\partial z^{4}}{\partial z_{1}^{3}} \;\frac{\partial z_{1}^{3}}{\partial z_{2}^{2}}\;\frac{\partial z_{2}^{2}}{\partial w_{1}} 
+      + \frac{\partial z^{4}}{\partial z_{1}^{3}} \;\frac{\partial z_{1}^{3}}{\partial z_{1}^{2}}\;\frac{\partial z_{1}^{2}}{\partial w_{1}}
+      $}
+  };
+
+  \foreach \Rnumber in {0,...,2} {
+    \draw[thick,orange] (\tbdis*\Rnumber + \xbase,\ybase) -- (\tbdis*\Rnumber + \xbase,\ybase + \hibox) -- (\tbdis*\Rnumber + \xbase + \wibox,\ybase + \hibox) -- (\tbdis*\Rnumber + \xbase + \wibox,\ybase) -- (\tbdis*\Rnumber + \xbase,\ybase);
+  }
+
+  \foreach \Rnumber in {0,...,2} {
+    \draw[thick,green] (\bbdis*\Rnumber + \xbase + \xbshift,\ybase+\ybshift) -- (\bbdis*\Rnumber + \xbase + \xbshift,\ybase+\ybshift + \hibox) -- (\bbdis*\Rnumber + \xbase + \xbshift + \wibox,\ybase+\ybshift + \hibox) -- (\bbdis*\Rnumber + \xbase + \xbshift + \wibox,\ybase+\ybshift) -- (\bbdis*\Rnumber + \xbase + \xbshift,\ybase+\ybshift);
+  }
+
+  \foreach \Rnumber/\c in {0/red,1/purple,2/blue} {%
+    \draw[thick,\c] (\tbdis*\Rnumber + \xbase + \xotshift,\ybase) -- (\tbdis*\Rnumber + \xbase + \xotshift,\ybase + \hibox) -- (\tbdis*\Rnumber + \xbase + \xotshift + \wibox,\ybase + \hibox) -- (\tbdis*\Rnumber + \xbase + \xotshift + \wibox,\ybase) -- (\tbdis*\Rnumber + \xbase + \xotshift,\ybase);
+  }
+
+  \foreach \Rnumber/\c in {0/red,1/purple,2/blue} {%
+    \draw[thick,\c] (\bbdis*\Rnumber + \xbase + \xobshift,\ybase+\ybshift) -- (\bbdis*\Rnumber + \xbase + \xobshift,\ybase+\ybshift + \hibox) -- (\bbdis*\Rnumber + \xbase + \xobshift + \wibox,\ybase+\ybshift + \hibox) -- (\bbdis*\Rnumber + \xbase + \xobshift + \wibox,\ybase+\ybshift) -- (\bbdis*\Rnumber + \xbase + \xobshift,\ybase+\ybshift);
+  }
+\end{tikzpicture}
+
+\end{document}

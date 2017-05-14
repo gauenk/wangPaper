@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[margin=0.5in,vmargin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+
+\begin{document}
+\begin{centering}
+%% neural network parameters
+\newcommand\widthCirc{.5}% % size of all circles
+\newcommand\otdis{4}% % distance between layers
+\newcommand\nodeSep{2}% % node seperation along y axis
+\newcommand\inputNodes{4}% % input node count
+\newcommand\hiddenNodes{4}% % hidden node count
+\newcommand\outputNodes{1}% % output node count
+\newcommand\inputSRow{1}% % vertical off-set of input layer
+\newcommand\hiddenSRow{1}% % vertical off-set of hidden layer
+\newcommand\outputSRow{4}% % vertical off-set of output layer
+\newcommand\numLayers{2}% % number of layers ommiting output layer
+\newcommand\twohiddenNodes{4}% % second hidden layer node count
+\newcommand\twohiddenSRow{1}% % vertical off-set of second hidden layer
+\newcommand\adjust{0.5}% % adjust
+  \begin{tikzpicture}
+    \node (A) at (0,\hiddenSRow+0.5) {\Large{Input: $\mathbf{x}_{i}$}};
+%    \node (A) at (0,\hiddenSRow+0) {\Large{$\mathbf{x}_{i}$}};
+    \node (B) at (\otdis-\otdis*0.2,\twohiddenSRow+\nodeSep*2.5) {\Large{$\mathbf{f}_{i} = e^{\frac{\|\mathbf{x}-\mathbf{l}_{i}\|}{2\sigma^2}}$}};
+    \node (C) at (2*\otdis+\otdis*0.25,\outputSRow+0.5) {\Large{$\hat{y}_{i} = \mathbf{f}_{i}^{T}\mathbf{w}$}};
+    \node (D) at (\otdis+\otdis*0.5,\hiddenSRow+0.5) {\Large{Features: $\mathbf{f}_{i}$}};
+    
+%    \node (D) at (2*\otdis+3,\outputSRow+2) {\Large{Hinge-Loss}};
+%    \draw[ultra thick, ->] (2*\otdis+\widthCirc,\outputSRow+\nodeSep) -- (2*\otdis-\widthCirc+3,\outputSRow+\nodeSep) node [above]{\Large{Hinge-Loss}};
+
+    \foreach \Rnumber in {1,...,\inputNodes}{
+      \filldraw[color=red!60, fill=red!5, very thick](0,\inputSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\hiddenNodes}{
+      \filldraw[color=red!60, fill=red!5, very thick](\numLayers*\otdis-2*\otdis,\hiddenSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+
+    \foreach \Rnumber in {1,...,\twohiddenNodes}{
+      \filldraw[color=blue!60, fill=blue!5, very thick](\numLayers*\otdis-1*\otdis*0.5,\hiddenSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\outputNodes}{
+      \filldraw[color=purple!60, fill=purple!5, very thick](\numLayers*\otdis+\otdis*0.25,\outputSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+
+
+    \foreach \Rnumber in {1,...,\inputNodes}{
+      \foreach \Cnumber in {1,...,\hiddenNodes}{
+        \draw[ultra thin, ->,dotted] (\numLayers*\otdis-2*\otdis+\widthCirc,\hiddenSRow+\nodeSep*\Rnumber) -- (\otdis*0.5-0.1,\twohiddenSRow+\nodeSep*2.5-0.1) node {};
+%        \draw[ultra thin, ->, dotted] (0+\widthCirc,\inputSRow+\nodeSep*\Rnumber) -- (\otdis-\widthCirc,\hiddenSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+    \foreach \Rnumber in {1,...,\inputNodes}{
+      \foreach \Cnumber in {1,...,\hiddenNodes}{
+        \draw[ultra thin, ->, dotted] (\otdis*0.5+2.5,\twohiddenSRow+\nodeSep*2.5-0.1) -- (\otdis+\otdis*0.5-\widthCirc-0.1,\hiddenSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+
+
+    \foreach \Rnumber in {1,...,\hiddenNodes}{
+      \foreach \Cnumber in {1,...,\twohiddenNodes}{
+%        \draw[ultra thin, ->,dotted] (\numLayers*\otdis-2*\otdis+\widthCirc,\hiddenSRow+\nodeSep*\Rnumber) -- (\numLayers*\otdis-\otdis-\widthCirc,\twohiddenSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+    \foreach \Rnumber in {1,...,\twohiddenNodes}{
+      \foreach \Cnumber in {1,...,\outputNodes}{
+        \draw[ultra thick, ->] (\numLayers*\otdis-\otdis*0.5+\widthCirc,\hiddenSRow+\nodeSep*\Rnumber) -- (\numLayers*\otdis+\otdis*0.25-\widthCirc,\outputSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+
+  \end{tikzpicture}
+\end{centering}
+
+\end{document}

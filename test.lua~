@@ -1,0 +1,19 @@
+require 'torch'
+require 'nn'
+
+function hinge_loss(x)
+   local y
+   if x:dim() == 2 then
+      for i = 1,x:size(1) do
+	 for j = 1,x:size(2) do
+	    y = torch.max(0,x)
+	 end
+      end
+   else
+      print("error")
+   end
+end
+
+x = linspace(1,100,100)
+y = hinge_loss(x)
+print(x)

@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\begin{document}
+\begin{algorithmic}
+  \Function{asdf}{asdf}
+  \EndFunction
+  \Procedure{CrossValidate}{$\Phi$}
+    \ForAll{$\phi \in {\Phi_1,\cdots,\Phi_{k-1},\Phi_k}$} 
+      \State $model =$ Train($\Phi \setminus \phi$ )
+      \ForAll{$s \in \phi$ }
+        \State \Comment{hej}
+      \EndFor
+    \EndFor
+  \EndProcedure
+\end{algorithmic}
+\end{document}

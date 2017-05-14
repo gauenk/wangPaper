@@ -1,0 +1,74 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+%% neural network parameters
+
+\begin{document}
+\newcommand\widthCirc{.75}% % size of all circles
+\newcommand\nodeSep{2}% % node seperation along y axis
+\newcommand\inputNodes{4}% % input node count
+\newcommand\hiddenNodes{5}% % hidden node count
+\newcommand\outputNodes{2}% % output node count
+\newcommand\inputSRow{1}% % vertical off-set of input layer
+\newcommand\hiddenSRow{6}% % vertical off-set of hidden layer
+\newcommand\outputSRow{3}% % vertical off-set of output layer
+\newcommand\numLayers{3}% % number of layers ommiting output layer
+\newcommand\twohiddenNodes{5}% % second hidden layer node count
+\newcommand\twohiddenSRow{0}% % vertical off-set of second hidden layer
+\newcommand\squareSize{0.9}%
+\newcommand\squareShift{3}%
+\newcommand\weightShift{2.5}%
+\newcommand\otdis{7}% % distance between layers
+\begin{centering}%
+  \begin{tikzpicture}[thick,scale=1.5, every node/.style={scale=1.5}]
+
+    \node at (-0.25,\inputSRow + \nodeSep * 4.65) {\Huge{inputs}};
+    \node at (\weightShift+0.25,\inputSRow + \nodeSep * 4.85) {\Huge{weights}};
+
+    \node at (0,\inputSRow + \nodeSep * 4.2) {\Huge{$x_{1}$}};
+    \node at (0,\inputSRow + \nodeSep * 3.2) {\Huge{$x_{2}$}};
+    \node at (0,\inputSRow + \nodeSep * 2.2) {\Huge{$x_{3}$}};
+    \node at (0,\inputSRow + \nodeSep * 1) {\Huge{$x_{n}$}};
+
+    \draw[ultra thick, ->] (0.35,\inputSRow+\nodeSep*1) -- (\weightShift-\widthCirc-0.08,\inputSRow+\nodeSep*1) node {};
+    \draw[ultra thick, ->] (0.35,\inputSRow+\nodeSep*2.2) -- (\weightShift-\widthCirc-0.08,\inputSRow+\nodeSep*2.2) node {};
+    \draw[ultra thick, ->] (0.35,\inputSRow+\nodeSep*3.2) -- (\weightShift-\widthCirc-0.08,\inputSRow+\nodeSep*3.2) node {};
+    \draw[ultra thick, ->] (0.35,\inputSRow+\nodeSep*4.2) -- (\weightShift-\widthCirc-0.08,\inputSRow+\nodeSep*4.2) node {};
+
+
+    \draw[very thick,black,dotted] (0,\inputSRow + \nodeSep * 1.3) -- (0,\inputSRow + \nodeSep * 1.8) {};
+
+
+    \filldraw[color=black, fill=white, very thick](\weightShift,\inputSRow+\nodeSep*\inputNodes - \nodeSep*0.8 + \nodeSep) circle (\widthCirc) node {\huge{$w_{1,j}$}};
+    \filldraw[color=black, fill=white, very thick](\weightShift,\inputSRow+\nodeSep*\inputNodes - \nodeSep*1.8 + \nodeSep) circle (\widthCirc) node {\huge{$w_{2,j}$}};
+    \filldraw[color=black, fill=white, very thick](\weightShift,\inputSRow+\nodeSep*\inputNodes - \nodeSep*2.8 + \nodeSep) circle (\widthCirc) node {\huge{$w_{3,j}$}};
+    \filldraw[color=black, fill=white, very thick](\weightShift,\inputSRow+\nodeSep*\inputNodes - \nodeSep*4 + \nodeSep) circle (\widthCirc) node {\huge{$w_{n,j}$}};
+
+    \draw[very thick,black,dotted] (\weightShift,\inputSRow + \nodeSep * 1.4) -- (\weightShift,\inputSRow + \nodeSep * 1.8) {};
+    \draw[ultra thick, ->] (\weightShift+\widthCirc,\inputSRow+\nodeSep*1) -- (\otdis-\widthCirc+.1,\hiddenSRow-0.35) node {};
+    \draw[ultra thick, ->] (\weightShift+\widthCirc,\inputSRow+\nodeSep*2.2) -- (\otdis-\widthCirc,\hiddenSRow-.125) node {};
+    \draw[ultra thick, ->] (\weightShift+\widthCirc,\inputSRow+\nodeSep*3.2) -- (\otdis-\widthCirc,\hiddenSRow+0.125) node {};
+    \draw[ultra thick, ->] (\weightShift+\widthCirc,\inputSRow+\nodeSep*4.2) -- (\otdis-\widthCirc+.1,\hiddenSRow+0.35) node {};
+
+    \filldraw[color=black, fill=white, very thick](\otdis,\hiddenSRow) circle (\widthCirc) node {\Huge{$\mathbf{\sum}$}};
+    \node at (\otdis+0.5,\hiddenSRow-1) {\Huge{transfer}};
+    \node at (\otdis+0.5,\hiddenSRow-1.75) {\Huge{function}};
+
+    \draw[ultra thick, ->] (\otdis+\widthCirc+0.05,\hiddenSRow) -- (\otdis+\squareShift-\squareSize-0.05,\hiddenSRow) node {};
+
+    \filldraw[color=black, fill=white, very thick] (\otdis+\squareShift-\squareSize,\hiddenSRow-\squareSize) -- (\otdis+\squareShift+\squareSize,\hiddenSRow-\squareSize) -- (\otdis+\squareShift+\squareSize,\hiddenSRow+\squareSize) -- (\otdis+\squareShift-\squareSize,\hiddenSRow+\squareSize) -- (\otdis+\squareShift-\squareSize,\hiddenSRow-\squareSize);
+
+    \node at (\otdis+\squareShift,\hiddenSRow) {\Huge{$\phi(\,\cdotp)$}};
+    \node at (\otdis+\squareShift,\hiddenSRow+2) {\Huge{activation}};
+    \node at (\otdis+\squareShift,\hiddenSRow+1.3) {\Huge{function}};
+
+    \draw[ultra thick, ->] (\otdis+\squareShift+\squareSize+0.05,\hiddenSRow) -- (\otdis+\squareShift+\squareSize + 1.8,\hiddenSRow) node {};
+
+    \node at (\otdis+\squareShift+\squareSize + 2.25,\hiddenSRow-.1) {\Huge{$a_{j}$}};
+    \node at (\otdis+\squareShift+\squareSize + 2.2,\hiddenSRow-0.8) {\Huge{activation}};
+
+  \end{tikzpicture}
+\end{centering}
+
+\end{document}

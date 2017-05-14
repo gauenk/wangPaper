@@ -1,0 +1,6 @@
+\documentclass{standalone}
+\usepackage{pgfmath}
+\begin{document}
+\def\names{{"Katie","Frank","Laura","Joe"}}%
+\pgfmathparse{\names[2]}\pgfmathresult
+\end{document}

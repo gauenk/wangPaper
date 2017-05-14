@@ -1,0 +1,449 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{mnist_lecun}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LY1}
+  \strng{fullhash}{LY1}
+  \field{title}{The MNIST Database}
+  \verb{url}
+  \verb http://yann.lecun.com/exdb/mnist/index.html
+  \endverb
+  \field{year}{1998}
+\endentry
+
+\entry{Freitas}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Freitas}{F.}%
+     {Nando}{N.}%
+     {de}{d.}%
+     {}{}}%
+  }
+  \strng{namehash}{FNd1}
+  \strng{fullhash}{FNd1}
+  \field{title}{Oxford University: Machine Learning Course}
+  \verb{url}
+  \verb https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
+  \endverb
+  \field{year}{2015}
+\endentry
+
+\entry{torch}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Collobert}{C.}%
+     {R.}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kavukcuoglu}{K.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Farabet}{F.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CRKKFC1}
+  \strng{fullhash}{CRKKFC1}
+  \field{booktitle}{BigLearn, NIPS Workshop}
+  \field{title}{Torch7: A Matlab-like Environment for Machine Learning}
+  \field{year}{2011}
+\endentry
+
+\entry{Lecun98}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Lecun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bottou}{B.}%
+     {Léon}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Haffner}{H.}%
+     {Patrick}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LY+1}
+  \strng{fullhash}{LYBLBYHP1}
+  \field{booktitle}{Proceedings of the IEEE}
+  \field{pages}{2278\bibrangedash 2324}
+  \field{title}{Gradient-based learning applied to document recognition}
+  \field{year}{1998}
+\endentry
+
+\entry{alexnet}{incollection}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Krizhevsky}{K.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sutskever}{S.}%
+     {Ilya}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hinton}{H.}%
+     {Geoffrey~E.}{G.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{4}{}{%
+    {{}%
+     {Pereira}{P.}%
+     {F.}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Burges}{B.}%
+     {C.~J.~C.}{C.~J.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bottou}{B.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Weinberger}{W.}%
+     {K.~Q.}{K.~Q.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Curran Associates, Inc.}%
+  }
+  \strng{namehash}{KASIHGE1}
+  \strng{fullhash}{KASIHGE1}
+  \field{booktitle}{Advances in Neural Information Processing Systems 25}
+  \field{pages}{1097\bibrangedash 1105}
+  \field{title}{ImageNet Classification with Deep Convolutional Neural
+  Networks}
+  \verb{url}
+  \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-conv
+  \verb olutional-neural-networks.pdf
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{residual_cnn}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {He}{H.}%
+     {Kaiming}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Xiangyu}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ren}{R.}%
+     {Shaoqing}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sun}{S.}%
+     {Jian}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HK+1}
+  \strng{fullhash}{HKZXRSSJ1}
+  \field{title}{Deep Residual Learning for Image Recognition}
+  \verb{url}
+  \verb http://arxiv.org/abs/1512.03385
+  \endverb
+  \field{volume}{abs/1512.03385}
+  \field{journaltitle}{CoRR}
+  \field{year}{2015}
+\endentry
+
+\entry{oxford_vgg}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Simonyan}{S.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zisserman}{Z.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SKZA1}
+  \strng{fullhash}{SKZA1}
+  \field{title}{Very Deep Convolutional Networks for Large-Scale Image
+  Recognition}
+  \field{volume}{abs/1409.1556}
+  \field{journaltitle}{CoRR}
+  \field{year}{2014}
+\endentry
+
+\entry{nlp_cnn}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Kalchbrenner}{K.}%
+     {Nal}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grefenstette}{G.}%
+     {Edward}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Blunsom}{B.}%
+     {Phil}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KNGEBP1}
+  \strng{fullhash}{KNGEBP1}
+  \field{title}{A Convolutional Neural Network for Modelling Sentences}
+  \verb{url}
+  \verb http://arxiv.org/abs/1404.2188
+  \endverb
+  \field{volume}{abs/1404.2188}
+  \field{journaltitle}{CoRR}
+  \field{year}{2014}
+\endentry
+
+\entry{ILSVRC15}{article}{}
+  \name{author}{12}{}{%
+    {{}%
+     {Russakovsky}{R.}%
+     {Olga}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Deng}{D.}%
+     {Jia}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Su}{S.}%
+     {Hao}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Krause}{K.}%
+     {Jonathan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Satheesh}{S.}%
+     {Sanjeev}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ma}{M.}%
+     {Sean}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Huang}{H.}%
+     {Zhiheng}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Karpathy}{K.}%
+     {Andrej}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Khosla}{K.}%
+     {Aditya}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bernstein}{B.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Berg}{B.}%
+     {Alexander~C.}{A.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fei-Fei}{F.-F.}%
+     {Li}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RO+1}
+  \strng{fullhash}{RODJSHKJSSMSHZKAKABMBACFFL1}
+  \verb{doi}
+  \verb 10.1007/s11263-015-0816-y
+  \endverb
+  \field{number}{3}
+  \field{pages}{211\bibrangedash 252}
+  \field{title}{{ImageNet Large Scale Visual Recognition Challenge}}
+  \field{volume}{115}
+  \field{journaltitle}{International Journal of Computer Vision (IJCV)}
+  \field{year}{2015}
+\endentry
+
+\entry{joyofconv}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Crutchfield}{C.}%
+     {Steve}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CS1}
+  \strng{fullhash}{CS1}
+  \field{title}{Joy of Convolution}
+  \verb{url}
+  \verb http://pages.jh.edu/~signals/convolve/
+  \endverb
+  \list{institution}{1}{%
+    {Johns Hopkins University}%
+  }
+  \field{year}{2016}
+\endentry
+
+\entry{scherer2010evaluation}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Scherer}{S.}%
+     {Dominik}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {M{\"u}ller}{M.}%
+     {Andreas}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Behnke}{B.}%
+     {Sven}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{SDMABS1}
+  \strng{fullhash}{SDMABS1}
+  \field{booktitle}{International Conference on Artificial Neural Networks}
+  \field{pages}{92\bibrangedash 101}
+  \field{title}{Evaluation of pooling operations in convolutional architectures
+  for object recognition}
+  \field{year}{2010}
+\endentry
+
+\entry{Platt_smo}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Platt}{P.}%
+     {John~C.}{J.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PJC1}
+  \strng{fullhash}{PJC1}
+  \field{title}{Sequential Minimal Optimization: A Fast Algorithm for Training
+  Support Vector Machines}
+  \list{institution}{1}{%
+    {ADVANCES IN KERNEL METHODS - SUPPORT VECTOR LEARNING}%
+  }
+  \field{type}{techreport}
+  \field{year}{1998}
+\endentry
+
+\entry{ng_smo}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ng}{N.}%
+     {Andrew}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NA1}
+  \strng{fullhash}{NA1}
+  \field{title}{CS229 Lecture Notes: Support Vector Machines}
+  \list{institution}{1}{%
+    {Standford University}%
+  }
+  \field{year}{2012}
+\endentry
+
+\entry{Karan}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Samel}{S.}%
+     {Karan}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SK1}
+  \strng{fullhash}{SK1}
+  \field{title}{The eGPU Experience}
+  \verb{url}
+  \verb http://karans.github.io/iPinYouDNN/
+  \endverb
+  \field{year}{2016}
+\endentry
+
+\entry{Kent}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Gauen}{G.}%
+     {Kent}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GK1}
+  \strng{fullhash}{GK1}
+  \field{title}{Torch7 Machine Learning Models}
+  \verb{url}
+  \verb http://llc.stat.purdue.edu/~gauenk/
+  \endverb
+  \field{year}{2016}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

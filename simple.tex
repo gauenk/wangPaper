@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\begin{document}
+\begin{algorithmic}
+  \Function{asdf}{asdf}
+  \EndFunction
+  \Procedure{CrossValidate}{$\Phi$}
+    \ForAll{$\phi \in {\Phi_1,\cdots,\Phi_{k-1},\Phi_k}$} 
+      \State $model =$ Train($\Phi \setminus \phi$ )
+      \ForAll{$s \in \phi$ }
+        \State \Comment{hej}
+      \EndFor
+    \EndFor
+  \EndProcedure
+\end{algorithmic}
+
+
+
+\begin{algorithm}
+  \caption{Modular Back-Propgation
+    \label{alg:backProp}}
+  \begin{algorithmic}[1]
+%    \Require{Given $m$ layers for each layer $L$ compute: $1$) $z^{L+1}$, $2$) $\frac{\partial z^{L+1}}{\partial z^{L}}$, and $3$) $\frac{\partial z^{L+1}}{\partial \theta^{L}}$}
+    \Statex
+    \Procedure{Compute $\frac{\partial C}{\partial\theta^{L}}$ where $L = m-n$}{}
+    \While{terminating conditions are not satisfied}{ }
+       \State Complete \textbf{Forward Pass}
+       \State Compute  Cost $C = z^{m}$
+       \Procedure{Back-Propogation}{}
+       \Let{$\delta^{m}$}{$1$}
+       \For{$i = 1 \to (n-1)$}
+          \For{$k = 1 \to t$ where $t$ the number of nodes in the $\left(m-i\right)$ module}
+             \Let{$\delta(0)^{\left(m-i\right)}_{k}$}{$0$}
+             \For{$j = 1 \to r$ where $r$ is the number of nodes in the $\left(m-i+1\right)$ module}
+%                \State Save and Compute $\delta_{k}^{\left(m-i\right)}$ where:
+
+                \Let{$\delta(j)_{k}^{\left(m-i\right)}$}{$\delta(j-1)^{\left(m-i\right)}_{k} + \delta_{j}^{\left(m-i+1\right)}\frac{\partial z_{j}^{\left(m-i+1\right)}}{\partial z_{k}^{m-i}}$}
+             \EndFor
+             \State \textbf{end}
+             \Let{$\delta_{k}^{\left(m-i\right)}$}{$\delta(r)_{k}^{\left(m-i\right)}$}
+          \EndFor
+          \State \textbf{end}
+          \Let{$\delta^{\left(m-i\right)}$}{$\left[\delta_{1}^{\left(m-i\right)},\:\delta_{2}^{\left(m-i\right)},\, \ldots \, , \;\delta_{t}^{\left(m-i\right)}\right]$}
+       \EndFor
+       \State \textbf{end}
+       \State Compute Partial Derivative
+       \Let{$\frac{\partial C}{\partial\theta^{L}}$}{$\delta^{L+1} \frac{\partial z^{L+1}}{\partial \theta^{L}}  $}
+       \State Update Weights:
+       \Let{$\theta^{L}$}{$\theta^{L} + \eta \frac{\partial C}{\partial\theta^{L}}$}
+       \EndProcedure
+%       \State \textbf{end}
+       \EndWhile
+%       \State \textbf{end}
+       \EndProcedure
+%       \State \textbf{end}
+  \end{algorithmic}
+\end{algorithm}
+\begin{algorithm}
+  \caption{Neural Networks
+    \label{alg:nn}}
+  \begin{algorithmic}[1]
+%    \Require{A labeled dataset $X$ with labels $Y$ where $x_{i} \in \mathbb{R}$ is a single data vector of dataset $X$ and $y_{i} \in \{0,1\}$ is the corresponding label vector containing $k$ elements for $k$ classes from the dataset $Y$}
+    \Statex
+    \While{Terminating conditions are not satisfied}{}
+       \Procedure{Forward Pass}{}
+          \Let{$z^{1}$}{$x$}
+          \Let{$z^{2}$}{$f_{1}\!\left(\theta^{1}z^{1}\right)$}
+          \Let{$z^{3}$}{$f_{2}\!\left(\theta^{2}z^{2}\right)$}
+          \State $\vdots$
+          \Let{$z^{m}$}{$f_{m}\!\left(\theta^{m-1}z^{m-1}\right)$}
+          \Let{Compute Error}{\textbf{ie:} Negative-Log Likelihood Criterion}
+       \EndProcedure
+       \State \textbf{end}
+       \Procedure{Backward-Propogation}{see algorithm \ref{alg:backProp}}
+          \State Note: if given the sigmoid function where $\sigma\left(x\right)=\frac{1}{1+e^{-x}}$ the partial derivatives are:
+          \Let{$\frac{\partial z^{L+1}}{\partial z^{L}}$}{$\sigma\!\left(\theta^{L}z^{L}\right)\left(1-\sigma\!\left(\theta^{L}z^{L}\right)\right)\theta^{L}$}
+          \Let{$\frac{\partial z^{L+1}}{\partial \theta^{L}}$}{$\sigma\!\left(\theta^{L}z^{L}\right)\left(1-\sigma\!\left(\theta^{L}z^{L}\right)\right) z^{L}$}
+       \EndProcedure
+       \State \textbf{end}
+    \EndWhile
+  \end{algorithmic}
+\end{algorithm}
+
+\newpage
+\begin{algorithm}
+  \caption{Support Vector Machines
+    \label{alg:svm}}
+  \begin{algorithmic}[1]
+    \Require{A labeled dataset $X$ with labels $Y$ where $x_{i} \in \mathbb{R}$ is a single data vector of dataset $X$ and $y_{i} \in \{-1,1\}$ is the corresponding label from dataset $Y$}
+    \Statex
+    \Procedure{Max-Margin Boundary}{$X, Y$}
+    \While{Terminating conditions are not satisfied}
+    \Let{Compute Error}{
+      \[\left[\frac{1}{n}\sum_{i=1}^{n}\mathrm{max}\left(0,1-y_{i}\left(w*x_{i}+b\right)\right)\right]+\lambda\|w\|^{2}\]}
+    \Let{w}{new value}
+    \EndWhile
+    \State 
+    \EndProcedure
+  \end{algorithmic}
+\end{algorithm}
+
+
+Note that since correlation and convolution will results in \emph{exactly} the same solution, we will not bother taking the "flip" of the filter defined below. Convoultional neural networks are used when there is reason to believe that the neighboring features are related to each other. This was first proven to be a powerful method in Alex Krizhevski's $2010$ ImageNet Competiton.
+\begin{algorithm}
+  \caption{Convolutional Neural Networks
+    \label{alg:nn}}
+  \begin{algorithmic}[1]
+    \Require{A labeled dataset $X$ with labels $Y$ where $x_{i} \in \mathbb{R}$ is a single data vector of dataset $X$ and $y_{i} \in \{0,1\}$ is the corresponding label vector containing $k$ elements for $k$ classes from the dataset $Y$}
+    \Statex
+    \State Set stride ($s$) and number of filters ($w$)
+    \While{Terminating conditions are not satisfied}{}
+       \Procedure{Convolutional Layer}{}
+          \Let{$f$}{filters with dimensions $w \times q\times r$}
+          
+       \EndProcedure
+       \State \textbf{end}
+       \Procedure{Pooling Layer}{}
+          
+       \EndProcedure
+       \State \textbf{end}
+
+       \Procedure{Neural Network}{see algorithm \ref{alg:nn}}
+       \EndProcedure
+    \EndWhile
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+\end{document}

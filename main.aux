@@ -1,0 +1,184 @@
+\relax 
+\bibstyle{biblatex}
+\bibdata{main-blx,Master}
+\citation{biblatex-control}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\select@language{english}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{mnist_lecun}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2}Dataset: MNIST}{2}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The MNIST dataset is gray-scale images of handwritten arabic integers, $0 - 9$. This provides machine learning researchers with an easily understood dataset, demands little pre-processing, and requires a non-trivial solution. \relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:mnist_ex}{{1}{2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3}Supervised Learning}{2}}
+\gincltex@bb{figures/nn_single_node.tex}{0}{0}{701.6938}{381.86838}
+\gincltex@bb{figures/mlp_ex.tex}{0}{0}{401.37184}{253.49951}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Multilayer Perceptrons Methodoloy \& Analysis}{3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A single node from a neural network. $\DOTSB \sum@ \slimits@ = w_{0j} + w_{1j}x_{1} + w_{2j}x_{2} + \ldots  + w_{nj}x_{n}$ and $a_j = \phi (\DOTSB \sum@ \slimits@ )$, where $a_j$ is the output from the $j^{th}$ node in a layer. The layer is not indicated in this example with indicies.\relax }}{3}}
+\newlabel{fig:node}{{2}{3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An example neural network with $4$ input features, $2$ hidden layers with $5$ nodes each, and $2$ output nodes.\relax }}{3}}
+\newlabel{fig:mlp_ex}{{3}{3}}
+\newlabel{eq:weight_update}{{3}{4}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces This is an example error surface of which we wish to find the minimum. $C(w)$ is general loss function with model parameters $w_{1}$ and $w_{2}$. By starting on the deep red peak, we can see that one minima is the light blue local minima directly below the red peak. However, a better solution would be the global minimum in depper blue on the right. This situation illustrates how initialization of model parameters can influence the overall model performance. If we start on the right side of either yellow peak, our minima will be global while the red peak only will reach the local minima. Neural networks often get stuck in local minima, but it is experimentally observed that they are still able to perform very accurately. \relax }}{5}}
+\newlabel{fig:error_plot}{{4}{5}}
+\newlabel{eq:rmse_2}{{5}{5}}
+\gincltex@bb{figures/error_paths.tex}{0}{0}{196.38696}{141.2572}
+\gincltex@bb{figures/error_paths.tex}{0}{0}{196.38696}{141.2572}
+\gincltex@bb{figures/error_paths.tex}{0}{0}{196.38696}{141.2572}
+\citation{Freitas}
+\gincltex@bb{figures/module_single.tex}{0}{0}{181.78392}{134.83061}
+\gincltex@bb{figures/module_nn.tex}{0}{0}{134.83061}{329.8316}
+\newlabel{eq:chain_rule}{{6}{6}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces There are many paths error can travel through the model from the cost function output $a^{4}$. Displayed are the six paths of error required to update a single weight vector between layer $1$ and $2$. Notice that many of the paths go through the same two nodes, three paths for each node in layer $3$. The modular view of back-propogation takes advantage of this repetition.\relax }}{6}}
+\newlabel{fig:error_paths}{{5}{6}}
+\newlabel{eq:mod_1}{{7}{6}}
+\newlabel{eq:mod_2}{{8}{6}}
+\newlabel{eq:mod_3}{{9}{6}}
+\citation{torch}
+\citation{Freitas}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces For full functionality of a model a single module of a neural network needs to be able to perform $3$ computations, highlighted in blue.\relax }}{7}}
+\newlabel{fig:single_module}{{6}{7}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Pictured is a modular view of a neural network. Notice that only the first layer in this network has weights associated with it. The first layer is the linear layer. The second layer is the ``log-softmax'' layer. The third layer is the ``negative log-likelihood'' function. The second and third layers are fully explained in the logisitc regression section of this paper. If the reader is unfamiliar with their functions, it is advised that they breifly review them.\relax }}{7}}
+\newlabel{fig:module_nn}{{7}{7}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Full-batch versus Mini-batch versus Online learning.\relax }}{7}}
+\newlabel{fig:learning_size}{{8}{7}}
+\gincltex@bb{figures/logit.tex}{0}{0}{403.37454}{293.99277}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Logistic \& Multinomial Logistics Regression}{8}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Logistic and multionmial logistic regression is the basic classification for binary and multi-variate classification tasks respectively. Notice how a binary task, yes or no, can be written as both a binary and multi-class problem.\relax }}{8}}
+\newlabel{fig:logit_nn}{{9}{8}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The sigmoid function ``squashes'' the input argument between $[0,1]$, and is the fundamental building block of classification. This allows us to interpret it's output as probability. Often it is interpreted as the probability of the presence of an arbitrary feature that $\mathbf  {w}$ is set to detect.\relax }}{8}}
+\newlabel{fig:sigmoid}{{10}{8}}
+\newlabel{eq:sigmoid}{{10}{8}}
+\citation{Freitas}
+\citation{Freitas}
+\newlabel{eq:prod_bern}{{14}{9}}
+\gincltex@bb{figures/conv_header.tex}{0}{0}{453.09773}{173.42554}
+\newlabel{eq:softmax}{{18}{10}}
+\newlabel{eq:prod_mult}{{19}{10}}
+\newlabel{eq:ln_prod_mult}{{20}{10}}
+\newlabel{eq:cross_entropy}{{21}{10}}
+\citation{Lecun98}
+\citation{alexnet}
+\citation{residual_cnn}
+\citation{oxford_vgg}
+\citation{nlp_cnn}
+\citation{Lecun98}
+\citation{ILSVRC15}
+\citation{alexnet}
+\citation{joyofconv}
+\gincltex@bb{figures/conv_conv.tex}{0}{0}{305.4317}{125.6939}
+\gincltex@bb{figures/conv_conv.tex}{0}{0}{305.4317}{125.6939}
+\gincltex@bb{figures/conv_conv.tex}{0}{0}{305.4317}{125.6939}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Convolutional Neural Network}{11}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Each color is an instance of a single filter striding across the input image. Each of the filter indicies are multiplied with the corresponding indicies in the image, i.e. the dot product is computed. In this example, the filter has a size of $3\times 3$ with a stride of $1$ and the original input image has $1$ row and $1$ column of zero padding. The convolved image is then spatially pooled in $2\times 2$ regions to create the final output from our convolution layer.\relax }}{11}}
+\newlabel{fig:conv_net}{{11}{11}}
+\newlabel{eq:conv_def}{{22}{11}}
+\gincltex@bb{figures/conv_pooling.tex}{0}{0}{179.36525}{93.7079}
+\gincltex@bb{figures/conv_pooling.tex}{0}{0}{179.36525}{93.7079}
+\gincltex@bb{figures/conv_pooling.tex}{0}{0}{179.36525}{93.7079}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Visual representation of a convolutional filter over an input image. The filter is the $3\times 3$, stride is set to $1$, and there is one row and column of zero-padding which is highlighted in red. The binary digit $9$ in the first column is convolved with the filter in the second column. The output of the dot product between the pixels and the filter is shown in the far right image.\relax }}{12}}
+\newlabel{fig:conv_ex}{{12}{12}}
+\citation{scherer2010evaluation}
+\gincltex@bb{figures/svm_bestline.tex}{0}{0}{430.99185}{215.25348}
+\gincltex@bb{figures/svm_bestline.tex}{0}{0}{430.99185}{215.25348}
+\gincltex@bb{figures/svm_bestline.tex}{0}{0}{430.99185}{215.25348}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces ReLU activation function given by $\mathrm  {ReLU}(x) = \mathrm  {max}(0,x)$\relax }}{13}}
+\newlabel{fig:relu}{{13}{13}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Max pooling of convolutional output. Each region is annotated\relax }}{13}}
+\newlabel{fig:pool_ex}{{14}{13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Support Vector Machine}{13}}
+\citation{Platt_smo}
+\citation{ng_smo}
+\gincltex@bb{figures/svm_nonlinear.tex}{0}{0}{428.13652}{215.25348}
+\gincltex@bb{figures/svm_nonlinear.tex}{0}{0}{428.13652}{215.25348}
+\gincltex@bb{figures/svm_nonlinear.tex}{0}{0}{428.13652}{215.25348}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces There are many lines which will classify with $100\%$ accuracy, but some decision boundaries can be considered better than others. The ``$\mcolor {+}$'' corresponds to $\mcolor {+}1$ and the ``$\mcolor [Blue]{-}$'' corresponds to $\mcolor [Blue]{-}1$ on the third dimension not shown. The best line to separate the two classes is the line which cuts exactly between the two classes, leaving the largest margins on either side of the decision boundary (the line).\relax }}{14}}
+\newlabel{fig:svm_bestline}{{15}{14}}
+\newlabel{eq:svm_lag}{{25}{14}}
+\newlabel{eq:svm_constraint1}{{26}{14}}
+\newlabel{eq:svm_constraint2}{{27}{14}}
+\newlabel{eq:svm_weights}{{28}{14}}
+\newlabel{eq:hinge_loss}{{29}{14}}
+\gincltex@bb{figures/svm_nn.tex}{0}{0}{325.76}{237.30109}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces The original data (on the left) can not be classified by a linear decision boundary, so we must use the ``kernal-trick'' to transform the data set into a feature space where the data is linearly seperable (on the right). This image only shows transformation in two of the $7$ dimensions (one for each training example). We used $l_{1}$ and $l_{3}$ as our ``landmarks'', and a guassian kernal with $\sigma ^{2} = 1$.\relax }}{15}}
+\newlabel{fig:svm_nonlinear}{{16}{15}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces The kernalized support vector machine can be seen as the nerual network above, with a special activation function between the first and second layer, which requires no weights. The last layer's output is the ``raw'' output from a linear layer between $\mathbf  {f}_{i}$ and $\mathbf  {w}$.\relax }}{15}}
+\newlabel{fig:svm_nn}{{17}{15}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces The Hinge-Loss function encourages ``+'' examples to be large in magintude and positive, and ``$-$'' examples to be large in magintude and negative.\relax }}{15}}
+\newlabel{fig:hinge_loss}{{18}{15}}
+\gincltex@bb{figures/kmeans_data.tex}{0}{0}{213.67775}{215.25348}
+\gincltex@bb{figures/kmeans_init.tex}{0}{0}{213.67775}{215.25348}
+\newlabel{eq:svm_features}{{3.4}{16}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Recurrent Neural Networks}{16}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4}Unsupervised Learning}{16}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}K-Means Clustering}{16}}
+\gincltex@bb{figures/kmeans_assignment.tex}{0}{0}{213.67775}{215.25348}
+\gincltex@bb{figures/kmeans_move.tex}{0}{0}{213.67775}{215.25348}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Pictured is the data for our k-means clustering example. There are $3$ completely separate clusters. While this will give us an easy solution to our clustering problem, frequently in real world datasets class distributions overlap. In these cases, kernal-methods are used (exactly like in support vector machines) to minimize the distribution overlap.\relax }}{17}}
+\newlabel{fig:kmeans_data}{{19}{17}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Here we have initialized $k = 3$ clusters. The number of centroids and their initialization is crucial for quality results.\relax }}{17}}
+\newlabel{fig:kmeans_init}{{20}{17}}
+\gincltex@bb{figures/kmeans_2or3.tex}{0}{0}{213.67775}{215.25136}
+\gincltex@bb{figures/kmeans_final.tex}{0}{0}{213.67775}{215.25136}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Every training example is assigned to the closest k cluster. The computation for distance can vary, but the Euclidean distance is common.\relax }}{18}}
+\newlabel{fig:kmeans_assignment}{{21}{18}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces The k clusters move to the mean location of the assigned data-points.\relax }}{18}}
+\newlabel{fig:kmeans_move}{{22}{18}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Are there $2$ or $3$ clusters? It is hard for a user to determine without looking at a graph. Computing how well the data is ``clustered'' can be used to determine the initial number of $k$ means. After convergence, corrections can be made to determine if different centroid are assigned to the same cluster.\relax }}{18}}
+\newlabel{fig:kmeans_2or3}{{23}{18}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces This is the final result of the k-means algorithm. We can clearly see that we have successfully assigned each of the training example to separate classes. Using the dataset, we can now assign the meaning to the clusters.\relax }}{18}}
+\newlabel{fig:kmeans_final}{{24}{18}}
+\newlabel{eq:disp_index}{{31}{18}}
+\newlabel{eq:kmeans_cost}{{32}{18}}
+\gincltex@bb{figures/pca_bad.tex}{0}{0}{213.67775}{215.25348}
+\gincltex@bb{figures/pca_best.tex}{0}{0}{213.67775}{215.25136}
+\newlabel{alg:kmeans}{{1}{19}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces K-Means Clustering \relax }}{19}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}PCA}{19}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces This is a bad direction to compress the data in, since our variability in the data is low. Notice how the red dots on the baseline are compact. Our reconstruction using the resulting red dots would be poor.\relax }}{20}}
+\newlabel{fig:pca_bad}{{25}{20}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces This is the best direction to compress the data. Clearly we have maximized the variability. Note how the line that captures the most variance also satisfies the least-squares solution for this data. Think back to high-school when you talked about the $r^{2}$ term. Linear regression is how much variance is explained by the data, which is captured in the $r^{2}$ term.\relax }}{20}}
+\newlabel{fig:pca_best}{{26}{20}}
+\newlabel{eq:eigen}{{35}{20}}
+\newlabel{eq:cov_mat}{{36}{20}}
+\newlabel{eq:pca_nvals}{{37}{20}}
+\gincltex@bb{figures/autoenc_nn.tex}{0}{0}{286.11685}{240.73412}
+\citation{alexnet}
+\citation{Karan}
+\citation{Freitas}
+\citation{torch}
+\citation{Kent}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Auto-Encoders}{21}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces This figure represent the architecture of an auto-encoder. Auto-encoders are simply a special case of neural networks. They create low-dimensional, non-linear representations of data.\relax }}{21}}
+\newlabel{fig:autoenc_nn}{{27}{21}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5}Hardware and Platform}{21}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}GPU Performance}{21}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces The NVIDIA GeForce GTX Titan X is a powerful non-commercial GPU. This GPU boasts $3072$ Cuda cores, $1000$ MHz base clock, $1075$ boost clock, $7$ Gbps memory clock, $12$ GB of GDDR5, and $336.5$ GB/sec memory bandwidth. The retail value of a single Titan X is around $\$1000$, and often deep learning researchers and competitors will purchase a computer with $4$ of them. \relax }}{21}}
+\newlabel{fig:titanx}{{28}{21}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Coding Platforms}{22}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {6}Data Analysis: MNIST}{22}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Classification Results}{22}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Fitness of Multi-Layer Perceptron.\relax }}{22}}
+\newlabel{fig:epoch_mlp}{{29}{22}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Fitness of Logistic Regression\relax }}{22}}
+\newlabel{fig:epoch_logit}{{30}{22}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Fitness of Convolutional Neural Network\relax }}{22}}
+\newlabel{fig:epoch_cnn}{{31}{22}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Fitness of Support Vector Machine \footnotemark \relax }}{22}}
+\newlabel{fig:epoch_svm}{{32}{22}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Features Visualization}{23}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces After clustering we can color each cluster to produces an image like this. We can interpret the different colors as the regions that separate the classes.\relax }}{23}}
+\newlabel{fig:kmeans_image}{{33}{23}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces A compressed representaion of the mnist digits using PCA. \mcolor {more details on the compression}\relax }}{23}}
+\newlabel{fig:pca_image}{{34}{23}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces A compressed representaion of the mnist digits using auto-encoders. \mcolor {more details on the compression}\relax }}{23}}
+\newlabel{fig:autoenc_image}{{35}{23}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces The results on the right have the smallest Euclidean distance between the compressed representations of the image on the left and itself. This means that we can interpret the compressed representation as having some correlation to the content of the image.\relax }}{23}}
+\newlabel{fig:autoenc_fetch}{{36}{23}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{23}}

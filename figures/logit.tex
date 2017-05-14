@@ -1,0 +1,85 @@
+\documentclass[11pt]{standalone}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[margin=1in,vmargin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{floatrow}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+
+
+\begin{document}
+%% neural network parameters
+\newcommand\widthCirc{.5}% % size of all circles
+\newcommand\otdis{5}% % distance between layers
+\newcommand\nodeSep{2}% % node seperation along y axis
+\newcommand\inputNodesOne{4}% % input node count
+\newcommand\inputSRowOne{0}% % vertical off-set of input layer
+\newcommand\inputNodesTwo{4}% % input node count
+\newcommand\inputSRowTwo{0}% % vertical off-set of input layer
+\newcommand\hiddenNodesOne{1}% % hidden node count
+\newcommand\hiddenSRowOne{3}% % vertical off-set of hidden layer
+\newcommand\hiddenNodesTwo{2}% % hidden node count
+\newcommand\hiddenSRowTwo{2}% % vertical off-set of hidden layer
+\newcommand\txshift{7}% % vertical off-set of hidden layer
+\newcommand\tyshift{0}% % vertical off-set of hidden layer
+\begin{centering}
+  \begin{tikzpicture}
+    \foreach \Rnumber in {1,...,\inputNodesOne}{
+      \filldraw[color=red!60, fill=red!5, very thick](0,\inputSRowOne+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\hiddenNodesOne}{
+      \filldraw[color=blue!60, fill=blue!5, very thick](\otdis,\hiddenSRowOne+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+
+    \foreach \Rnumber in {1,...,\inputNodesTwo}{
+      \filldraw[color=red!60, fill=red!5, very thick](\txshift,\inputSRowOne+\nodeSep*\Rnumber+\tyshift) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\hiddenNodesTwo}{
+      \filldraw[color=blue!60, fill=blue!5, very thick](\otdis+\txshift,\hiddenSRowTwo+\nodeSep*\Rnumber+\tyshift) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    %% add arrows for logit
+    \node (A) at (0,\inputSRowOne-.2) {{\Large{Input}}};
+    \draw[ultra thick, ->] (0,\inputSRowOne) -- (0,\inputSRowOne+\nodeSep-.75) node {};
+    \node (A) at (\txshift,\inputSRowTwo-.2+\tyshift) {{\Large{Input}}};
+    \draw[ultra thick, ->] (\txshift,\inputSRowTwo+\tyshift) -- (\txshift,\inputSRowTwo+\nodeSep+\tyshift-.75) node {};
+
+
+    %% add arrows for logit
+    \node (B) at (\otdis,\hiddenSRowOne-.2) {{\Large{Prediction}}};
+    \draw[ultra thick, ->] (\otdis,\hiddenSRowOne) -- (\otdis,\hiddenSRowOne+\nodeSep-.75) node {};
+    \node (B) at (\otdis+\txshift,\hiddenSRowTwo-.2+\tyshift) {{\Large{Prediction}}};
+    \draw[ultra thick, ->] (\otdis+\txshift,\hiddenSRowTwo+\tyshift) -- (\otdis+\txshift,\hiddenSRowTwo+\nodeSep-.75+\tyshift) node {};
+
+    \node (C) at (\otdis/2,\inputSRowOne-.2+\hiddenSRowOne+\nodeSep*\inputNodesOne-1.5) {{\huge{\underline{Logistic}}}};
+    \node (C) at (\txshift+\otdis/2,\inputSRowTwo-.2+\tyshift+\hiddenSRowTwo+\nodeSep*\inputNodesTwo-0.5) {{\huge{\underline{Multinomial}}}};
+
+    \foreach \Rnumber in {1,...,\inputNodesOne}{
+      \foreach \Cnumber in {1,...,\hiddenNodesOne}{
+        \draw[ultra thick, ->] (0+\widthCirc,\inputSRowOne+\nodeSep*\Rnumber) -- (\otdis-\widthCirc,\hiddenSRowOne+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+
+    \foreach \Rnumber in {1,...,\inputNodesTwo}{
+      \foreach \Cnumber in {1,...,\hiddenNodesTwo}{
+        \draw[ultra thick, ->] (0+\widthCirc+\txshift,\inputSRowTwo+\nodeSep*\Rnumber+\tyshift) -- (\otdis-\widthCirc+\txshift,\hiddenSRowTwo+\nodeSep*\Cnumber+\tyshift) node {};
+      }
+    }
+
+
+  \end{tikzpicture}
+\end{centering}
+
+\end{document}

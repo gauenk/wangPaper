@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[margin=0.5in,vmargin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+%% neural network parameters
+\newcommand\widthCirc{.5} % size of all circles
+\newcommand\otdis{8} % distance between layers
+\newcommand\nodeSep{2} % node seperation along y axis
+\newcommand\inputNodes{5} % input node count
+\newcommand\hiddenNodes{7} % hidden node count
+\newcommand\outputNodes{1} % output node count
+\newcommand\inputSRow{0} % vertical off-set of input layer
+\newcommand\hiddenSRow{-1.75} % vertical off-set of hidden layer
+\newcommand\outputSRow{4} % vertical off-set of output layer
+
+\begin{document}
+
+\begin{centering}
+
+  \begin{tikzpicture}
+    \foreach \Rnumber in {1,...,\inputNodes}{
+      \filldraw[color=red!60, fill=red!5, very thick](0,\inputSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\hiddenNodes}{
+      \filldraw[color=blue!60, fill=blue!5, very thick](\otdis,\hiddenSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+    
+    \foreach \Rnumber in {1,...,\inputNodes}{
+      \foreach \Cnumber in {1,...,\hiddenNodes}{
+        \draw[ultra thick, ->] (0+\widthCirc,\inputSRow+\nodeSep*\Rnumber) -- (\otdis-\widthCirc,\hiddenSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+    \foreach \Rnumber in {1,...,\outputNodes}{
+      \filldraw[color=purple!60, fill=purple!5, very thick](2*\otdis,\outputSRow+\nodeSep*\Rnumber) circle (\widthCirc) node {$\Rnumber$};
+    }
+
+    \foreach \Rnumber in {1,...,\hiddenNodes}{
+      \foreach \Cnumber in {1,...,\outputNodes}{
+        \draw[ultra thick, ->] (\otdis+\widthCirc,\hiddenSRow+\nodeSep*\Rnumber) -- (2*\otdis-\widthCirc,\outputSRow+\nodeSep*\Cnumber) node {};
+      }
+    }
+
+  \end{tikzpicture}
+\end{centering}
+
+\end{document}

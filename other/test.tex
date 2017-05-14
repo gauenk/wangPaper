@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[margin=1in,vmargin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{floatrow}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.5.1}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+\pgfmathdeclarefunction{bivar}{4}{%
+  \pfgmathparse{1/(2*pi*#2*#4) * exp(-((x-#1)^2/#2^2 +
+    (y-#3)^2/#4^2))/2}%
+}
+\usetikzlibrary{shadows}
+%\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=purduegold,
+%    filecolor=magenta,      
+%    urlcolor=cyan,
+%}
+%\urlstyle{same}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand*{\everymodeprime}{\ensuremath{\prime}}
+{\renewcommand{\arraystretch}{2}%
+\usepackage [autostyle, english = american]{csquotes}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+
+
+
+\graphicspath{ {img/}}
+\definecolor{purduegold}{cmyk}{.43,.56,1,0}
+\newcommand{\mcolor}[2][red]{{\color{#1}\textbf{#2}}}
+
+\title{Machine Learning Models and Algorithms Summary}
+\author{Kent Gauen and Dr. Xiao Wang}
+\date{}
+
+\begin{document}
+
+\def\names{{"Katie","Frank","Laura","Joe"}}%
+\foreach \i in {0,...,3} {%
+  Name \i: \pgfmathparse{\names[\i]}\pgfmathresult, }
+
+\end{document}

@@ -1,0 +1,57 @@
+    \begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
+      \node (text) at (2.5,6.25) {\Huge{Input Image}};
+      % -=-=-=- ADDING ZEROS -=-=-=-
+      \addNumbersConv
+      % -=-=-=-=- REST OF IMAGE -=-=-=-=-
+      \node (A) at (0,0) {};
+      \node (B) at (5,5) {};
+
+      \node (bA) at (3.5,4.5) {};
+      \node (bB) at (3,0.5) {};
+
+      \node (bC) at (1,4.5) {};
+      \node (bD) at (3,4) {};
+
+      \node (bE) at (1,4) {};
+      \node (bF) at (1.5,2.5) {};
+
+      \node (bG) at (1,2.5) {};
+      \node (bH) at (3,2) {};
+
+      \draw[step=0.5cm,gray,very thin] (A) grid (B);
+      
+      \fill[black,opacity=0.6] (bA) rectangle (bB) {};
+      \fill[black,opacity=0.6] (bC) rectangle (bD) {};
+      \fill[black,opacity=0.6] (bE) rectangle (bF) {};
+      \fill[black,opacity=0.6] (bG) rectangle (bH) {};
+
+      % -=-=-=-=- CONVOLUTION IMAGE PORTION -=-=-=-=-=-
+      \node (cA) at (-0.5,4) {};
+      \node (cB) at (1,5.5) {};
+
+      \draw[step=0.5cm,blue,very thick,xshift=0cm,yshift=4cm] (cA) grid (cB);
+
+
+      % -=-=-=-=- ZERO PADDING -=-=-=-=-
+      \node (dA) at (-0.5,5) {};
+      \node (dB) at (5.5,5.5) {};
+      \node (dC) at (5,-0.5) {};
+      \node (dD) at (5.5,5.5) {};
+      \draw[step=0.5cm,red, very thin,xshift=0cm,yshift=0cm] (-0.5,-0.5) grid (5,0);
+      \draw[step=0.5cm,red, very thin,xshift=0cm,yshift=0cm] (-0.5,0) grid (0,5);
+      \draw[step=0.5cm,red, very thin,xshift=4cm,yshift=0cm] (dC) grid (dD);
+      \draw[step=0.5cm,red, very thin,xshift=0cm,yshift=3cm] (dA) grid (dB);
+      % -=-=-=-=- RESULTING IMAGE -=-=-=-=-
+      \node (title) at (1.5,4) {\Huge{Filter}};
+      \node (A) at (0,0) {};
+      \node (B) at (3,3) {};
+      \draw[step=1cm,black,thin] (A) grid (B);
+      \node (a) at (0.5,0.5) {\Huge{$1$}};
+      \node (b) at (1.5,0.5) {\Huge{$2$}};
+      \node (c) at (2.5,0.5) {\Huge{$1$}};
+      \node (d) at (0.5,1.5) {\Huge{$2$}};
+      \node (e) at (1.5,1.5) {\Huge{$1$}};
+      \node (f) at (2.5,1.5) {\Huge{$2$}};
+      \node (g) at (0.5,2.5) {\Huge{$1$}};
+      \node (h) at (1.5,2.5) {\Huge{$2$}};
+      \node (i) at (2.5,2.5) {\Huge{$1$}};

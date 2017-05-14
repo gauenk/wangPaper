@@ -1,0 +1,265 @@
+@article{nlp_cnn,
+  author    = {Nal Kalchbrenner and
+               Edward Grefenstette and
+               Phil Blunsom},
+  title     = {A Convolutional Neural Network for Modelling Sentences},
+  journal   = {CoRR},
+  volume    = {abs/1404.2188},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1404.2188},
+  timestamp = {Thu, 01 May 2014 14:56:20 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/KalchbrennerGB14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+                  
+@article{residual_cnn,
+  author    = {Kaiming He and
+               Xiangyu Zhang and
+               Shaoqing Ren and
+               Jian Sun},
+  title     = {Deep Residual Learning for Image Recognition},
+  journal   = {CoRR},
+  volume    = {abs/1512.03385},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1512.03385},
+  timestamp = {Wed, 30 Mar 2016 23:40:00 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/HeZRS15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}                  
+
+@Article{oxford_vgg,
+    author       = "Simonyan, K. and Zisserman, A.",
+    title        = "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+    journal      = "CoRR",
+    volume       = "abs/1409.1556",
+    year         = "2014"
+}
+
+@incollection{alexnet,
+   title = {ImageNet Classification with Deep Convolutional Neural Networks},
+   author = {Alex Krizhevsky and Sutskever, Ilya and Geoffrey E. Hinton},
+   booktitle = {Advances in Neural Information Processing Systems 25},
+   editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+   pages = {1097--1105},
+   year = {2012},
+   publisher = {Curran Associates, Inc.},
+   url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+}
+
+@article{GregorDRAW,
+  author    = {Karol Gregor and
+               Ivo Danihelka and
+               Alex Graves and
+               Daan Wierstra},
+  title     = {{DRAW:} {A} Recurrent Neural Network For Image Generation},
+  journal   = {CoRR},
+  volume    = {abs/1502.04623},
+  year      = 2015,
+  url       = {http://arxiv.org/abs/1502.04623},
+  timestamp = {Mon, 02 Mar 2015 14:17:34 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/GregorDGW15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{GravesNTM,
+  author    = {Alex Graves and
+               Greg Wayne and
+               Ivo Danihelka},
+  title     = {Neural Turing Machines},
+  journal   = {CoRR},
+  volume    = {abs/1410.5401},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1410.5401},
+  timestamp = {Sun, 02 Nov 2014 11:25:59 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/GravesWD14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{GravesGen,
+  author    = {Alex Graves},
+  title     = {Generating Sequences With Recurrent Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1308.0850},
+  year      = 2013,
+  url       = {http://arxiv.org/abs/1308.0850},
+  timestamp = {Tue, 10 Dec 2013 12:03:02 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Graves13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@MISC{HintonCoursera,
+author = {Hinton, Geoffrey},
+title = {Neural Networks for Machine Learning},
+month = Jun,
+year = {2012},
+url = {https://class.coursera.org/neuralnets-2012-001}
+}
+
+@MISC{NgCoursera,
+author = {Ng, Andrew},
+title = {Machine Learning},
+url = {https://www.coursera.org/learn/machine-learning}
+}
+
+@MISC{GrosseCS,
+author = {Roger Grosse and Nitish Srivastava},
+year = 2015,
+title = {CSC321 Introduction to Neural Networks},
+url = {http://www.cs.toronto.edu/~rgrosse/csc321/}
+}
+
+@MISC{Freitas,
+author = {Nando de Freitas},
+year = 2015,
+title = {Oxford University: Machine Learning Course},
+url = {https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/}
+}
+                  
+@MISC{joyofconv,
+author = {Steve Crutchfield},
+year = 2016,
+title = {Joy of Convolution},
+school = {Johns Hopkins University},                  
+url = {http://pages.jh.edu/~signals/convolve/}
+}
+
+@article{xuRNN,
+  author    = {Kelvin Xu and Jimmy Ba and Ryan Kiros and Kyunghyun Cho and Aaron C. Courville and Ruslan Salakhutdinov and Richard S. Zemel and Yoshua Bengio},
+  title     = {Show, Attend and Tell: Neural Image Caption Generation with Visual Attention},
+  journal   = {CoRR},
+  volume    = {abs/1502.03044},
+  year      = 2015,
+  url       = {http://arxiv.org/abs/1502.03044},
+  timestamp = {Mon, 02 Mar 2015 14:17:34 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/XuBKCCSZB15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{Tang,
+  author    = {Yichuan Tang and
+               Nitish Srivastava and
+               Ruslan Salakhutdinov},
+  title     = {Learning generative models with visual attention},
+  journal   = {CoRR},
+  volume    = {abs/1312.6110},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1312.6110},
+  timestamp = {Mon, 06 Jan 2014 15:10:41 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/TangSS13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@MISC{PyPR,
+   author = {J.P. Petersen},
+   year = {2010},
+   url = {http://pypr.sourceforge.net/kmeans.html#k-means-example},
+   timestamp = {Mon, 02 Mar 2015 14:17:34 +0100},
+
+}
+
+@INPROCEEDINGS{Lecun98,
+    author = {Yann Lecun and Léon Bottou and Yoshua Bengio and Patrick Haffner},
+    title = {Gradient-based learning applied to document recognition},
+    booktitle = {Proceedings of the IEEE},
+    year = {1998},
+    pages = {2278--2324}
+}
+
+@inproceedings{scherer2010evaluation,
+  title={Evaluation of pooling operations in convolutional architectures for object recognition},
+  author={Scherer, Dominik and M{\"u}ller, Andreas and Behnke, Sven},
+  booktitle={International Conference on Artificial Neural Networks},
+  pages={92--101},
+  year={2010},
+  organization={Springer}
+}
+
+@inproceedings{torch,
+  title = {Torch7: A Matlab-like Environment for Machine Learning},
+  author = {R. Collobert and K. Kavukcuoglu and C. Farabet},
+  booktitle = {BigLearn, NIPS Workshop},
+  year = 2011
+}
+
+@article{ILSVRC15,
+Author = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+Title = {{ImageNet Large Scale Visual Recognition Challenge}},
+Year = {2015},
+journal   = {International Journal of Computer Vision (IJCV)},
+doi = {10.1007/s11263-015-0816-y},
+volume={115},
+number={3},
+pages={211-252}
+}
+
+@TECHREPORT{Platt_smo,
+    author = {John C. Platt},
+    title = {Sequential Minimal Optimization: A Fast Algorithm for Training Support Vector Machines},
+    institution = {ADVANCES IN KERNEL METHODS - SUPPORT VECTOR LEARNING},
+    year = {1998}
+}
+
+@inproceedings{ng_smo,
+    author = {Andrew Ng},
+    title = {CS229 Lecture Notes: Support Vector Machines},
+    institution = {Standford University},
+    year = {2012}
+}
+
+@MISC{mnist_lecun,
+   author = {Yann LeCun},
+   year = {1998},
+   title = {The MNIST Database},
+   url = {http://yann.lecun.com/exdb/mnist/index.html},
+}
+
+@MISC{Karan,
+   author = {Karan Samel},
+   year = {2016},
+   title = {The eGPU Experience},
+   url = {http://karans.github.io/iPinYouDNN/},
+}
+
+@MISC{Kent,
+   author = {Kent Gauen},
+   year = {2016},
+   title = {Torch7 Machine Learning Models},
+   url = {http://llc.stat.purdue.edu/~gauenk/}
+}
+
+@inproceedings{HoG,
+ author = {Dalal, Navneet and Triggs, Bill},
+ title = {Histograms of Oriented Gradients for Human Detection},
+ booktitle = {Proceedings of the 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05) - Volume 1 - Volume 01},
+ series = {CVPR '05},
+ year = {2005},
+ isbn = {0-7695-2372-2},
+ pages = {886--893},
+ numpages = {8},
+ url = {http://dx.doi.org/10.1109/CVPR.2005.177},
+ doi = {10.1109/CVPR.2005.177},
+ acmid = {1069007},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+} 
+
+@article{SIFT
+ author = {Lowe, David G.},
+ title = {Distinctive Image Features from Scale-Invariant Keypoints},
+ journal = {Int. J. Comput. Vision},
+ issue_date = {November 2004},
+ volume = {60},
+ number = {2},
+ month = nov,
+ year = {2004},
+ issn = {0920-5691},
+ pages = {91--110},
+ numpages = {20},
+ url = {http://dx.doi.org/10.1023/B:VISI.0000029664.99615.94},
+ doi = {10.1023/B:VISI.0000029664.99615.94},
+ acmid = {996342},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ keywords = {image matching, invariant features, object recognition, scale invariance},
+} 
+
